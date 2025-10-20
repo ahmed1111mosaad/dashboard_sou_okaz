@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "926725447107",
+    "project_id": "sou-okaz",
+    "storage_bucket": "sou-okaz.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926725447107:android:cb6b765146221dd9f0b176",
+        "android_client_info": {
+          "package_name": "com.example.dashbaord_sou_okaz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926725447107-jgo8726t2vo8i978betmf8071lgbs20q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqlhqzdFB9cXyCUMyl7Ixioes2GO1541M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926725447107-jgo8726t2vo8i978betmf8071lgbs20q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "926725447107-dghia61l23qmi0idk6cpo0mp8uks87m2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dashbaordSouOkaz"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926725447107:android:b30441555361590df0b176",
+        "android_client_info": {
+          "package_name": "com.example.sou_okaz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926725447107-d9ecjp4v4v65e7g7d9ve4vlrsg48g6lg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sou_okaz",
+            "certificate_hash": "f93e6d6503d0bbaa62b6e77b1bb7d8239ec52fad"
+          }
+        },
+        {
+          "client_id": "926725447107-jgo8726t2vo8i978betmf8071lgbs20q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqlhqzdFB9cXyCUMyl7Ixioes2GO1541M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926725447107-jgo8726t2vo8i978betmf8071lgbs20q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "926725447107-dghia61l23qmi0idk6cpo0mp8uks87m2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dashbaordSouOkaz"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

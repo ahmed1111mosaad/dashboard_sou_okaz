@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:dashbaord_sou_okaz/Features/home/presentation/views/home_screen.dart';
+import 'package:dashbaord_sou_okaz/core/helpers/functions/navigator_with_fade_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
@@ -44,13 +44,12 @@ class _SplashScreenState extends State<SplashScreen>
     });
 
     Timer(const Duration(seconds: 6), () {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) {
-            return HomeScreen();
-          },
-        ),
-      );
+      // if (FirebaseAuth.instance.currentUser == null) {
+      //   navigatorWithFadeAnimationPushReplacement(context, SigninView());
+      // } else {
+      //   navigatorWithFadeAnimationPushReplacement(context, HomeScreen());
+      // }
+        navigatorWithFadeAnimationPushReplacement(context, HomeScreen());
     });
   }
 
@@ -114,7 +113,7 @@ class _SplashScreenState extends State<SplashScreen>
                           style: TextStyle(
                             fontFamily: 'Cinzel',
                             color: Colors.white,
-                            fontSize: MediaQuery.of(context).size.width * 0.08,
+                            fontSize: MediaQuery.of(context).size.width * 0.07,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
