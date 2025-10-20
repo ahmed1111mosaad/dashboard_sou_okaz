@@ -1,3 +1,4 @@
+import 'package:dashbaord_sou_okaz/Features/splash/presentation/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,6 @@ class DashboardSouOkaz extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
   }
 }
