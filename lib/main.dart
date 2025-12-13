@@ -14,6 +14,10 @@ class DashboardSouOkaz extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
+    return MaterialApp(
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white.withAlpha(248)),
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
+    );
   }
 }
