@@ -190,15 +190,8 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                       },
                     ),
                   ),
-                  SizedBox(height: responsiveFontSize(context, 0.035, 0)),
 
-                  // ? Social Buttons
-                  
-                  SizedBox(height: responsiveFontSize(context, 0.023, 0)),
-                  
-                  SizedBox(height: responsiveFontSize(context, 0.023, 0)),
-                  
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.03),
 
                   // ? Don't Have Account
                   Center(

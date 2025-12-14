@@ -8,8 +8,9 @@ class LoadingSignInState extends SignInStates {}
 
 class SuccessSignInState extends SignInStates {
   final UserEntity userEntity;
+  final bool isAdmin;
 
-  SuccessSignInState({required this.userEntity});
+  SuccessSignInState({required this.userEntity, required this.isAdmin});
 }
 
 class FailureSignInState extends SignInStates {

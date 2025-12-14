@@ -91,7 +91,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                 icon: Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: Icon(
-                    widget.obscureText ? Icons.remove : Icons.remove_red_eye,
+                    widget.obscureText ? Icons.visibility_off : Icons.visibility,
                     size: 17,
                     color: widget.obscureText
                         ? Colors.grey

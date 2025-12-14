@@ -36,6 +36,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
+  font_awesome_flutter: ^10.12.0
   get_it: ^9.2.0
   modal_progress_hud_nsn: ^0.5.1
   motion_toast: ^2.14.0

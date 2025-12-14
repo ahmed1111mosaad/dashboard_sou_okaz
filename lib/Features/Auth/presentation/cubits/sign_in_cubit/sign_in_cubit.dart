@@ -20,7 +20,12 @@ class SignInCubit extends Cubit<SignInStates> {
         emit(FailureSignInState(errMessage: failure.message));
       },
       (userEntity) {
-        emit(SuccessSignInState(userEntity: userEntity));
+        if (userEntity.role == 'Admin') {
+          emit(SuccessSignInState(userEntity: userEntity, isAdmin: true));
+        } else {
+          emit(SuccessSignInState(userEntity: userEntity, isAdmin: false));
+        }
+        print(userEntity.role);
       },
     );
   }

@@ -1,7 +1,6 @@
 import 'package:dashbaord_sou_okaz/Features/Auth/domain/entities/user_entity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-
 class UserModel extends UserEntity {
   @override
   final String name;
@@ -11,12 +10,15 @@ class UserModel extends UserEntity {
   final String uId;
   @override
   final String phoneNumber;
+  @override
+  final String? role;
 
   UserModel({
     required this.name,
     required this.email,
     required this.uId,
     required this.phoneNumber,
+    this.role,
   }) : super(name: name, email: email, uId: uId, phoneNumber: phoneNumber);
 
   factory UserModel.fromFirebase(User user) {
@@ -41,6 +43,7 @@ class UserModel extends UserEntity {
       email: json['email'],
       uId: json['uId'],
       phoneNumber: json['phoneNumber'],
+      role: json['role'],
     );
   }
   Map<String, dynamic> toJson() {
@@ -49,6 +52,7 @@ class UserModel extends UserEntity {
       'email': email,
       'uId': uId,
       'phoneNumber': phoneNumber,
+      'role': role ?? 'user',
     };
   }
 }

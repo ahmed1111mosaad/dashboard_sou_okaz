@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-
 class SignInBlocConsumer extends StatelessWidget {
   const SignInBlocConsumer({super.key, required this.child});
   final Widget child;
@@ -18,8 +17,16 @@ class SignInBlocConsumer extends StatelessWidget {
     return BlocConsumer<SignInCubit, SignInStates>(
       listener: (context, state) {
         if (state is SuccessSignInState) {
-          showSuccess(context, title: "Success Sign In", description: '');
-          navigatorWithFadeAnimationPushReplacement(context, HomeScreen());
+          if (state.isAdmin) {
+            showSuccess(context, title: "Success Sign In", description: '');
+            navigatorWithFadeAnimationPushReplacement(context, HomeScreen());
+          } else {
+            showFailure(
+              context,
+              title: "You are not authorized. Admins only.",
+              description: '',
+            );
+          }
         }
         if (state is FailureSignInState) {
           showFailure(context, title: state.errMessage, description: '');
