@@ -1,6 +1,6 @@
+import 'package:dashbaord_sou_okaz/Features/Auth/presentation/cubits/sign_up_cubit/sign_up_cubit.dart';
 import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/widgets/custom_elevated_button.dart';
 import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/widgets/custom_text_form_field.dart';
-import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/widgets/terms_and_conditions.dart';
 import 'package:dashbaord_sou_okaz/core/helpers/functions/responsive.dart';
 import 'package:dashbaord_sou_okaz/core/utils/app_text_styles.dart';
 import 'package:dashbaord_sou_okaz/core/utils/custom_arrow_back_app_bar.dart';
@@ -156,12 +156,7 @@ class _SignupViewbodyState extends State<SignupViewbody> {
                     isSearchField: false,
                   ),
                   SizedBox(height: 10),
-                  // ! Terms And Conditions
-                  TermsAndConditions(
-                    onChanged: (bool value) {
-                      isTermsAccepted = value;
-                    },
-                  ),
+
                   SizedBox(height: 25),
                   // ! Sign Up Button
                   SizedBox(
@@ -172,23 +167,14 @@ class _SignupViewbodyState extends State<SignupViewbody> {
                         if (formKey.currentState!.validate()) {
                           formKey.currentState!.save();
 
-                          if (isTermsAccepted) {
-                            // BlocProvider.of<SignUpCubit>(
-                            //   context,
-                            // ).createUserWithEmailAndPassowrd(
-                            //   email: email!,
-                            //   password: password!,
-                            //   name: name!,
-                            //   phoneNumber: '',
-                            // );
-                          } else {
-                            showFailure(
-                              context,
-                              title: "Something went wrong",
-                              description:
-                                  "Please accept the Terms And Conditions",
-                            );
-                          }
+                          BlocProvider.of<SignUpCubit>(
+                            context,
+                          ).createUserWithEmailAndPassowrd(
+                            email: email!,
+                            password: password!,
+                            name: name!,
+                            phoneNumber: '',
+                          );
                         } else {
                           autovalidateMode = AutovalidateMode.always;
 

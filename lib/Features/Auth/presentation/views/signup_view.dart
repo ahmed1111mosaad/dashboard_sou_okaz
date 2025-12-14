@@ -7,12 +7,12 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(resizeToAvoidBottomInset: true, body: SignupViewbody());
-    // return SignUpViewBlocConsumer(
-    //   child: Scaffold(
-    //     resizeToAvoidBottomInset: true,
-    //     body: SignupViewbody(),
-    //   ),
-    // );
+    
+    return SignUpViewBlocConsumer(
+      child: Scaffold(
+        resizeToAvoidBottomInset: true,
+        body: SignupViewbody(),
+      ),
+    );
   }
 }

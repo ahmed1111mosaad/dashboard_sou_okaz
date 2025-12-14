@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/signin_view.dart';
-import 'package:dashbaord_sou_okaz/Features/home/presentation/views/home_screen.dart';
 import 'package:dashbaord_sou_okaz/core/helpers/functions/navigator_with_fade_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';

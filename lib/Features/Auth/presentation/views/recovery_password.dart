@@ -1,4 +1,5 @@
 import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/widgets/recovery_passowrd_body.dart';
+import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/widgets/recovery_pasword_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 
 class RecoveryPassword extends StatelessWidget {
@@ -6,15 +7,11 @@ class RecoveryPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-    //  RecoveryPaswordBlocConsumer(
-    //   child:
-    Scaffold(resizeToAvoidBottomInset: true, body: RecoveryPassowrdBody());
-    // return RecoveryPaswordBlocConsumer(
-    //   child: Scaffold(
-    //     resizeToAvoidBottomInset: true,
-    //     body: RecoveryPassowrdBody(),
-    //   ),
-    // );
+    return RecoveryPaswordBlocConsumer(
+      child: Scaffold(
+        resizeToAvoidBottomInset: true,
+        body: RecoveryPassowrdBody(),
+      ),
+    );
   }
 }

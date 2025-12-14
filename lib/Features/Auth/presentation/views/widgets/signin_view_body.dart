@@ -1,8 +1,8 @@
+import 'package:dashbaord_sou_okaz/Features/Auth/presentation/cubits/sign_in_cubit/sign_in_cubit.dart';
 import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/recovery_password.dart';
 import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/signup_view.dart';
 import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/widgets/custom_elevated_button.dart';
 import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/widgets/custom_text_form_field.dart';
-import 'package:dashbaord_sou_okaz/Features/Auth/presentation/views/widgets/sign_in_with_button.dart';
 import 'package:dashbaord_sou_okaz/core/helpers/functions/navigator_with_slide_animation.dart';
 import 'package:dashbaord_sou_okaz/core/helpers/functions/responsive.dart';
 import 'package:dashbaord_sou_okaz/core/utils/app_text_styles.dart';
@@ -177,12 +177,12 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                       onPressed: () {
                         if (key.currentState!.validate()) {
                           key.currentState!.save();
-                          // BlocProvider.of<SignInCubit>(
-                          //   context,
-                          // ).signInWithEmailAndPassword(
-                          //   email: email!,
-                          //   password: password!,
-                          // );
+                          BlocProvider.of<SignInCubit>(
+                            context,
+                          ).signInWithEmailAndPassword(
+                            email: email!,
+                            password: password!,
+                          );
                         } else {
                           autovalidateMode = AutovalidateMode.always;
                           setState(() {});
